@@ -83,6 +83,8 @@ function arr2CombineValues(a) {
   }
 }
 
+// Add function to show a snarky message when the firstNum is divided by 0;
+
 var inputElement = document.getElementById("myInput");
 var buttons = document.querySelectorAll("button");
 console.log(buttons);
@@ -95,7 +97,7 @@ buttons.forEach((button) => {
       console.log("counter is" + " " + counter);
       inputElement.value = Number(firstNum);
       console.log(firstNum);
-    }       else if (counter <= 10 && button.className == "operand") {
+    }       else if (counter <= 10 && counter > 0 && button.className == "operand") {
       operand = button.id;
       counter = 11;
       console.log("counter is" + " " + counter);
